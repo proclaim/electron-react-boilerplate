@@ -193,7 +193,7 @@ See [electron-builder CLI Usage](https://github.com/electron-userland/electron-b
 
 ## How to add modules to the project
 
-You will need to add other modules to this boilerplate, depending on the requirements of your project. For example, you may want to add [node-postgres](https://github.com/brianc/node-postgres) to communicate with PostgreSQL database, or 
+You will need to add other modules to this boilerplate, depending on the requirements of your project. For example, you may want to add [node-postgres](https://github.com/brianc/node-postgres) to communicate with PostgreSQL database, or
 [material-ui](http://www.material-ui.com/) to reuse react UI components.
 
 ⚠️ Please read following section before installing any dependencies ⚠️
@@ -210,7 +210,7 @@ This boilerplate uses a [two package.json structure](https://github.com/electron
 **Rule of thumb** is: all modules go into `./package.json` except native modules. Native modules go into `./app/package.json`.
 
 1. If the module is native to a platform (like node-postgres) or otherwise should be included with the published package (i.e. bcrypt, openbci), it should be listed under `dependencies` in `./app/package.json`.
-2. If a module is `import`ed by another module, include it in `dependencies` in `./package.json`.   See [this ESLint rule](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md). Examples of such modules are `material-ui`, `redux-form`, and `moment`.
+2. If a module is `imported` by another module, include it in `dependencies` in `./package.json`.   See [this ESLint rule](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md). Examples of such modules are `material-ui`, `redux-form`, and `moment`.
 3. Otherwise, modules used for building, testing and debugging should be included in `devDependencies` in `./package.json`.
 
 ### Further Readings
